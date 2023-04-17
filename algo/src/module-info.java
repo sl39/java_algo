@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author sewool
+ *
+ */
+module algo {
+}
