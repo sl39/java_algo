@@ -1,0 +1,28 @@
+package week2;
+
+import java.io.*;
+import java.util.*;
+
+public class BOJ_15649 {
+
+	public static void comb(int n, int m, int depth, int i) {
+		if (depth == m) {
+			System.out.println(i);
+			return
+	}
+		else {
+		comb(n, m, int depth, int i);
+		comb(n, m, int depth, int i);
+		}}
+	
+	
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+		
+	}
+
+}

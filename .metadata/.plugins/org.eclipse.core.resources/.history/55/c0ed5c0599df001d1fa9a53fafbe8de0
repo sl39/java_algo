@@ -1,0 +1,43 @@
+package week2;
+
+import java.io.*;
+import java.util.*;
+
+public class BOJ_15649 {
+
+	
+	
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+		int[] arr = new int[m+1];
+		boolean[] bool = new boolean[n+1];
+		perm(0);
+		
+		
+		
+	}
+
+	public static void perm(int idx) {
+		if (idx == m) {
+			for (int i= 1 ; i<=m ; i++) {
+				System.out.print(arr[i]+' ');
+				
+			}
+			System.out.println();
+			return;
+		}
+		for (int i = 1; i <= n;i++) {
+			if(!bool[i]) {
+				bool[i] = true;
+				arr[idx] = i;
+				perm(idx+1);
+				bool[i] = false;
+			}
+		}
+		
+	}
+}
