@@ -1,0 +1,37 @@
+package week2;
+
+import java.io.*;
+import java.util.*;
+
+public class BOJ_15650 {
+	public static int n;
+	public static int m;
+	public static int[] arr;
+	public static StringBuilder sb = new StringBuilder();
+	public static void comb(int i, int depth ) {
+		if(depth == m) {
+			for (int val : arr) {
+				sb.append(val).append(' ');
+			}
+		}
+		if(i== n+1) {
+			return;
+		}
+		
+		comb(i+1, depth );
+		arr[depth] = i;
+		comb(i+1, depth+1 );
+	}
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+		int[] arr = new int[m];
+		
+		
+		
+	}
+	
+}
